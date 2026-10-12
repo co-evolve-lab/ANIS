@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "apps": {},
+  "max_attempts_per_item": 3,
+  "revisit_statuses": [
+    "not_generated_with_reason",
+    "unsupported_with_reason",
+    "partially_generated_with_reason",
+    "evidence_only"
+  ],
+  "reusable_statuses": [
+    "generated",
+    "generated_and_verified",
+    "merged_equivalent"
+  ],
+  "suspicious_exclusion_phrases": [
+    "timeout",
+    "failed",
+    "hang",
+    "execution error",
+    "state unchanged after saving and reopening"
+  ],
+  "notes": "Applications are discovered from apps/*; execution settings live in ../../anis-config.json"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "app_aliases": {},
+  "coding_agent": {
+    "command": "codex",
+    "model": null,
+    "max_parallel_processes": 3
+  },
+  "workflow": {
+    "onboarding": {
+      "agent_timeout_seconds": 7200,
+      "script_timeout_seconds": 10800,
+      "stage_attempt_limit": 3,
+      "redo_limit": 2,
+      "minimum_pass_rate": 1.0
+    },
+    "capability_discovery": {
+      "batch_size": 30,
+      "max_parallel_batches": 3,
+      "item_attempt_limit": 2,
+      "max_runtime_attempts_per_item": 3,
+      "timeout_seconds": 1800,
+      "sandbox": "danger-full-access"
+    },
+    "capability_review": {
+      "max_parallel_batches": 3,
+      "timeout_seconds": 1800,
+      "sandbox": "read-only"
+    },
+    "command_implementation": {
+      "batch_size": 30,
+      "max_parallel_batches": 3,
+      "max_retries": 1,
+      "timeout_seconds": 900,
+      "verify_timeout_seconds": 120,
+      "total_timeout_seconds": 172800
+    },
+    "command_documentation": {
+      "enabled": true,
+      "timeout_seconds": 1800
+    },
+    "verification": {
+      "jobs": 4
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "batch_id": {"type": "string"},
+    "app": {"type": "string"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {"type": "string"},
+          "decision": {"type": "string", "enum": ["expose", "skip"]},
+          "reason": {"type": "string", "minLength": 1}
+        },
+        "required": ["item_id", "decision", "reason"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["batch_id", "app", "items"],
+  "additionalProperties": false
+}

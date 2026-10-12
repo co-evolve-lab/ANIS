@@ -1,0 +1,7 @@
+{
+  "runner": ["python3", "{script}"],
+  "env": {},
+  "mkdirs": [],
+  "document_extension": ".out",
+  "notes": "Example only: replace with the runtime command verified for the target application."
+}

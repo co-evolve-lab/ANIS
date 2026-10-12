@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+anis_release_root=$(CDPATH= cd "$(dirname "$0")/.." && pwd)
+exec env PYTHONPATH="$anis_release_root" python3 \
+  "$anis_release_root/anis/bootstrap.py" "$@"

@@ -1,0 +1,14 @@
+{
+  "name": "ANIS",
+  "version": "0.4.0",
+  "license": "MIT",
+  "released_at": "2026-08-19",
+  "artifact_kind": "standalone source distribution",
+  "entrypoints": ["bin/anis-bootstrap", "bin/anis-release"],
+  "python": ">=3.10",
+  "runtime_dependencies": [
+    "Python standard library",
+    "a configured Coding Agent executable",
+    "the target application"
+  ]
+}

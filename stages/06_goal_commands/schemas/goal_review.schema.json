@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["shared_subgoal", "subgoal", "object", "action", "summary", "reason"],
+  "properties": {
+    "shared_subgoal": {"type": "boolean"},
+    "subgoal": {"type": "string"},
+    "object": {"type": "string"},
+    "action": {"type": "string"},
+    "summary": {"type": "string"},
+    "reason": {"type": "string"}
+  }
+}

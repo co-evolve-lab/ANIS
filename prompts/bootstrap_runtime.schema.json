@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "app",
+    "status",
+    "launch_command",
+    "entrypoint_kind",
+    "evidence",
+    "alternatives",
+    "notes"
+  ],
+  "properties": {
+    "app": {"type": "string", "minLength": 1},
+    "status": {
+      "type": "string",
+      "enum": ["found", "not_found", "blocked"]
+    },
+    "launch_command": {"type": "string"},
+    "entrypoint_kind": {"type": "string"},
+    "evidence": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "notes": {"type": "string"}
+  }
+}

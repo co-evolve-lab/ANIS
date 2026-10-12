@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "adapter": null,
+  "build": {
+    "file_arg_help": "Artifact file path",
+    "selector_args": {}
+  },
+  "verification": {
+    "max_parallel_jobs": 1
+  },
+  "documentation": {
+    "example_file": "demo.out"
+  },
+  "release": {
+    "runtime_files": ["engine.py"],
+    "anis_modules": [
+      "__init__.py",
+      "kernel.py",
+      "cli.py",
+      "proptemplate.py",
+      "actiontemplate.py",
+      "transformtemplate.py"
+    ]
+  }
+}

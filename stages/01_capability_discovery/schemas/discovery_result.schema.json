@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "batch_id": {"type": "string"},
+    "app": {"type": "string"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {"type": "string"},
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "executable", "equivalent", "out_of_scope",
+              "unsupported", "blocked"
+            ]
+          },
+          "reason": {"type": "string", "minLength": 1},
+          "runtime_object": {"type": "string"},
+          "operation": {"type": "string"},
+          "parameters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "type": {"type": "string"},
+                "value_kind": {
+                  "type": "string",
+                  "enum": [
+                    "scalar", "enum", "file", "region", "object_reference",
+                    "struct", "sequence", "service", "stateful"
+                  ]
+                },
+                "target_type": {"type": "string"},
+                "required": {"type": "boolean"},
+                "default": {"type": "string"},
+                "values": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                }
+              },
+              "required": [
+                "name", "type", "value_kind", "target_type", "required",
+                "default", "values"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "returns": {"type": "string"},
+          "preconditions": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "object_relations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {"type": "string"},
+                "relation": {"type": "string"},
+                "target_type": {"type": "string"}
+              },
+              "required": ["path", "relation", "target_type"],
+              "additionalProperties": false
+            }
+          },
+          "attempts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "command": {"type": "string"},
+                "exit_code": {"type": "integer"},
+                "observation": {"type": "string"}
+              },
+              "required": ["command", "exit_code", "observation"],
+              "additionalProperties": false
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "kind": {"type": "string"},
+                "path": {"type": "string"},
+                "summary": {"type": "string"}
+              },
+              "required": ["kind", "path", "summary"],
+              "additionalProperties": false
+            }
+          },
+          "equivalent_commands": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "command_candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "capability_class": {"type": "string"},
+                "selector": {"type": "string"},
+                "arguments": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "implementation_route": {
+                  "type": "string",
+                  "enum": [
+                    "direct_property", "validated_enum", "validated_file",
+                    "structured_region", "resolve_runtime_object",
+                    "construct_runtime_struct", "construct_typed_sequence",
+                    "create_from_runtime_factory", "single_session_operation"
+                  ]
+                },
+                "persistence_check": {"type": "string", "minLength": 1}
+              },
+              "required": [
+                "name", "capability_class", "selector", "arguments",
+                "implementation_route", "persistence_check"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "item_id", "disposition", "reason", "runtime_object", "operation",
+          "parameters", "returns", "preconditions", "object_relations",
+          "attempts", "evidence", "equivalent_commands",
+          "command_candidates"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["batch_id", "app", "items"],
+  "additionalProperties": false
+}
