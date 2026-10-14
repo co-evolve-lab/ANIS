@@ -5,7 +5,7 @@
 ### Turn any installed desktop application into a verified command-line interface for LLM agents
 
 <p>
-  <a href="#citation"><img alt="Paper" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?logo=arxiv&logoColor=white"></a>
+  <a href="https://arxiv.org/abs/2610.15765"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2610.15765-b31b1b?logo=arxiv&logoColor=white"></a>
   <a href="https://huggingface.co/datasets/SimAlan/DeskIF-Bench"><img alt="DeskIF-Bench" src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-DeskIF--Bench-ffcc4d"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-2ea44f"></a>
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776ab?logo=python&logoColor=white">
@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <a href="#citation">📄 Paper</a> ·
+  <a href="https://arxiv.org/abs/2610.15765">📄 Paper</a> ·
   <a href="https://huggingface.co/datasets/SimAlan/DeskIF-Bench">🤗 Benchmark</a> ·
   <a href="#quick-start">🚀 Quick start</a> ·
   <a href="#results">📊 Results</a> ·
@@ -201,14 +201,12 @@ giving the repository a ⭐.
   title         = {A Decade in a Day: Synthesizing Agent-Native Interfaces from Human-Oriented Software Evolution},
   author        = {Wu, Alan and Tao, Wei and Guo, Yiwen},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},
+  eprint        = {2610.15765},
   archivePrefix = {arXiv},
   primaryClass  = {cs.SE},
-  url           = {https://github.com/co-evolve-lab/ANIS}
+  url           = {https://arxiv.org/abs/2610.15765}
 }
 ```
-
-<sub>The arXiv identifier will be filled in once the preprint is public.</sub>
 
 ## License
 
